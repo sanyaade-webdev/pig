@@ -1,0 +1,18 @@
+{ "name"        : "pig",
+  "version"     : "0.1.0",
+  "description" : "Acceptance test framework for applications.",
+  "keywords"    : ["acceptance", "bdd", "cucumber", "testing"],
+  "homepage"    : "https://github.com/tristandunn/pig",
+  "author"      : "Tristan Dunn <hello@tristandunn.com> (http://tristandunn.com)",
+  "main"        : "index.js",
+  "repository"  : {
+    "type" : "git",
+    "url"  : "https://github.com/tristandunn/pig.git"
+  },
+  "scripts" : {
+    "postinstall" : "node script/install.js"
+  },
+  "dependencies" : {
+    "cucumber" : "0.2.0"
+  }
+}
