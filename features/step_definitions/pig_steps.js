@@ -38,12 +38,8 @@ module.exports = function() {
     });
   });
 
-  Given(/^standard out is paused$/, function(next) {
+  When(/^I pause standard out and execute "([^"]*)"$/, function(code, next) {
     Browser.server.stdout.pause();
-    next();
-  });
-
-  When(/^I execute "([^"]*)"$/, function(code, next) {
     Browser.execute(code, next);
   });
 

@@ -8,29 +8,24 @@ Feature: Pig's integration with Cucumber
     Given a server is running
     And I am using a browser
 
-  Scenario: Simple text verification
+  Scenario: Verifying static text in a page
     When I visit the homepage
     Then I should see "Is JavaScript Enabled?"
 
-  Scenario: Simple JavaScript verification
+  Scenario: Verifying dynamic text in a page
     When I visit the homepage
     Then I should see "Yes"
 
-  Scenario: Capturing alerts
-    When standard out is paused
-    And I execute "alert('Hello, world!');"
+  Scenario: Capturing a JavaScript alert
+    When I pause standard out and execute "alert('Hello, world!');"
     Then I should see "ALERT: Hello, world!" when standard out is resumed
 
-  Scenario: Capturing console logging
-    When standard out is paused
-    And I execute "console.log('Hello, world!');"
-    Then I should see "Hello, world!" when standard out is resumed
-    When standard out is paused
-    And I execute "console.info('The world is round.');"
-    Then I should see "The world is round." when standard out is resumed
-    When standard out is paused
-    And I execute "console.warn('Danger!');"
-    Then I should see "Danger!" when standard out is resumed
-    When standard out is paused
-    And I execute "console.error('Oh noes!');"
-    Then I should see "Oh noes!" when standard out is resumed
+  Scenario: Capturing JavaScript console logging
+    When I pause standard out and execute "console.log('Hello, Log!');"
+    Then I should see "Hello, Log!" when standard out is resumed
+    When I pause standard out and execute "console.info('Hello, Information!');"
+    Then I should see "Hello, Information!" when standard out is resumed
+    When I pause standard out and execute "console.warn('Hello, Warning!');"
+    Then I should see "Hello, Warning!" when standard out is resumed
+    When I pause standard out and execute "console.error('Hello, Error!');"
+    Then I should see "Hello, Error!" when standard out is resumed
