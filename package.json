@@ -13,6 +13,6 @@
     "postinstall" : "node script/install.js"
   },
   "dependencies" : {
-    "cucumber" : "0.2.0"
+    "cucumber" : "0.2.1"
   }
 }
