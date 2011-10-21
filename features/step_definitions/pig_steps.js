@@ -2,9 +2,10 @@ var assert = require("assert"),
     HTTP   = require("http"),
     Pig    = require("../../index");
 
-module.exports = function(callback) {
-  var Given = When = Then = this.defineStep;
-  var Browser, Server;
+module.exports = function() {
+  var Server,
+      Browser,
+      Given = When = Then = this.defineStep;
 
   Given(/^a server is running$/, function(next) {
     if (Server) {
