@@ -9,10 +9,8 @@
     "type" : "git",
     "url"  : "https://github.com/tristandunn/pig.git"
   },
-  "scripts" : {
-    "postinstall" : "node script/install.js"
-  },
   "dependencies" : {
-    "cucumber" : "0.2.1"
+    "cucumber"      : "0.2.1",
+    "webkit-server" : "0.1.0"
   }
 }

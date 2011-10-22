@@ -1,6 +1,6 @@
 var assert = require("assert"),
     HTTP   = require("http"),
-    Pig    = require("../../index");
+    WebKit = require("webkit-server");
 
 module.exports = function() {
   var Server,
@@ -24,7 +24,7 @@ module.exports = function() {
       return next();
     }
 
-    Browser = new Pig.Browser(next);
+    Browser = new WebKit.Browser(next);
   });
 
   When(/^I visit the homepage$/, function(next) {

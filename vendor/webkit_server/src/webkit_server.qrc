@@ -1,5 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file>webkit_server.js</file>
-  </qresource>
-</RCC>
