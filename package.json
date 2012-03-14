@@ -10,7 +10,7 @@
     "url"  : "https://github.com/tristandunn/pig.git"
   },
   "dependencies" : {
-    "cucumber"      : "0.2.1",
-    "webkit-server" : "0.1.0"
+    "cucumber"      : "0.2.10",
+    "webkit-server" : "0.1.1"
   }
 }

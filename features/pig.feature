@@ -1,12 +1,9 @@
+@browser @server
 Feature: Pig's integration with Cucumber
 
   In order to integrate with the plain text testing framework
   As the Pig library
   I want to integrate successfully with Cucumber
-
-  Background:
-    Given a server is running
-    And I am using a browser
 
   Scenario: Verifying static text in a page
     When I visit the homepage
