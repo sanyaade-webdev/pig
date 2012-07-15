@@ -6,7 +6,7 @@ module.exports = function() {
   });
 
   this.Then(/^I should see "([^"]*)"$/, function(text, callback) {
-    this.browser.source(function(source) {
+    this.browser.source(function(error, source) {
       assert.notEqual(source.indexOf(text), -1, "Expected there to be content \"" + text + "\" in: " + source);
       callback();
     });
